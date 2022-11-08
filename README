@@ -1,1 +1,4 @@
-This is code for S3RKCF
+Matlab code for S3RKCF：
+WenhuiWu, YujieChen, RanWang, LeOu-Yang. Self-representative kernel concept factorization[J]. Knowledge-Based Systems, 2022.
+
+"CAN_kernel.m" is coded based on the code "CAN" provided by Q. Wang, Z. Qin, F. Nie, and X. Li, "Spectral Embedded Adaptive Neighbors Clustering," IEEE Transactions on Neural Networks and Learning Systems (T-NNLS), vol. 30, no. 4, pp. 1265-1271, 2019.
