@@ -1,5 +1,34 @@
 function [ U_final, V_final, obj_out,K_final,S_final] = KPCF_CAN(datacht, K, S, options, KPoptions, U, V,alpha,beta)
+% input:
+%   datacht: variables about dataset
+%       datacht.label: labels of labeled samples
+%       datacht.testlabel: labels of unlabeled samples
+%       datacht.N: the number of all samples
+%       datacht.k: the number of classes
+%       datacht.data: the features of all samples  
+%   K: predefined kernel matrix (refer to the paper)
+%   S: predefined affinity matrix constructed by KNN (refer to the paper)
+%   options: 
+%       options.k: the number of adaptive neighbor
+%       optons.maxIter: the number of outer iteration
+%   KPoptions: variables about Kernel propagation
+%       KPoptions.labelsub: labels of labeled samples
+%       KPoptions.indices: indices of labeled samples
+%   U: predefined random matrix of datacht.N*datacht.k
+%   V: predefined random matrix of datacht.N*datacht.k
+%   alpha: the weight coefficient of measuring the smoothness of kernel 
+%   beta: the weight coefficient of adaptive neighbor
 
+% For more details, please see:
+%   @article{wu2022self,
+%   title={Self-representative kernel concept factorization},
+%   author={Wu, Wenhui and Chen, Yujie and Wang, Ran and Ou-Yang, Le},
+%   journal={Knowledge-Based Systems},
+%   pages={110051},
+%   year={2022},
+%   publisher={Elsevier}
+% }
+% If you find the resource useful, hope cite our paper as mentioned above. Thanks. 
 
 obj_out=[];
 maxIter = options.maxIter;
